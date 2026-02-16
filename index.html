@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>BBE Pegasus Chapter - Chúc Mừng Năm Mới 2026</title>
+    
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;600;800&family=Dancing+Script:wght@700&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+
+    <script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#D6001C",
+                        "primary-dark": "#8B0000",
+                        "gold": {
+                            400: "#FDD835",
+                            500: "#FFD700", 
+                            600: "#FBC02D",
+                            "metallic": "#C59D5F",
+                        },
+                        "dark-bg": "#1a0505",
+                    },
+                    fontFamily: {
+                        "sans": ["Manrope", "sans-serif"],
+                        "script": ["Dancing Script", "cursive"],
+                    },
+                    animation: {
+                        'float': 'float 6s ease-in-out infinite',
+                        'shine': 'shine 3s linear infinite',
+                    },
+                    keyframes: {
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0)' },
+                            '50%': { transform: 'translateY(-20px)' },
+                        },
+                        shine: {
+                            'to': { backgroundPosition: '200% center' }
+                        }
+                    }
+                },
+            },
+        }
+    </script>
+
+    <style>
+        .text-gold-gradient {
+            background: linear-gradient(to right, #F2D06B, #D4AF37, #FFF59D, #D4AF37);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-size: 200% auto;
+            animation: shine 4s linear infinite;
+        }
+        .bg-pattern {
+            background-image: radial-gradient(rgba(255, 215, 0, 0.1) 1px, transparent 1px);
+            background-size: 30px 30px;
+        }
+        /* Hiệu ứng chung cho cả Modal Lì Xì và Modal Ảnh */
+        .modal-transition { transition: opacity 0.3s ease-in-out; }
+        .hidden-modal { opacity: 0; pointer-events: none; }
+        .visible-modal { opacity: 1; pointer-events: auto; }
+        
+        html { scroll-behavior: smooth; }
+    </style>
+</head>
+
+<body class="bg-slate-50 text-slate-800 font-sans selection:bg-gold-500 selection:text-white">
+
+    <nav class="fixed w-full z-40 bg-dark-bg/90 backdrop-blur-md border-b border-white/10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <div class="flex items-center gap-3">
+                    <img src="./chibi-horse.jpg" 
+                         onerror="this.src='https://imgs.search.brave.com/e-xseQNIIJfXl-RwvOJf93AowZP63iBxgO9wm8mWADo/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvN2E3Yjk0OWYw/ZTU0YWZkOTYzYTY3/YTZhNWY2NzgwZWFm/NWZlZWEyMGNlOWI5/NDU3YWY5OGNlY2Q1/Zjg1MzAxMS9iYmV2/aWV0bmFtLm9yZy8'"
+                         alt="BBE Pegasus Logo"
+                         class="w-12 h-12 rounded-full object-cover border-2 border-gold-metallic shadow-[0_0_15px_rgba(255,215,0,0.3)] bg-dark-bg">
+                </div>
+                <div class="hidden md:block">
+                    <div class="flex items-center space-x-8">
+                        <a href="#hero" class="text-white/80 hover:text-gold-400 transition-colors text-sm font-medium">Trang Chủ</a>
+                        <a href="#gallery" class="text-white/80 hover:text-gold-400 transition-colors text-sm font-medium">Dấu Ấn</a>
+                        <a href="#leadership" class="text-white/80 hover:text-gold-400 transition-colors text-sm font-medium">Ban Điều Hành</a>
+                        <a href="#fortune" class="bg-gold-500 hover:bg-gold-400 text-dark-bg px-5 py-2 rounded-full text-sm font-bold transition-all shadow-lg hover:shadow-gold-500/50">
+                            Hái Lộc
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <header id="hero" class="relative w-full min-h-screen flex items-center justify-center overflow-hidden bg-dark-bg text-center pt-16">
+        <div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1548625361-12e62243e8ce?q=80&w=2600&auto=format&fit=crop')] bg-cover bg-center opacity-10 mix-blend-overlay"></div>
+        <div class="absolute inset-0 bg-gradient-to-b from-transparent via-dark-bg/90 to-dark-bg"></div>
+
+        <div class="relative z-10 px-4 max-w-5xl mx-auto flex flex-col items-center">
+            
+            <div class="mb-8 animate-float relative group">
+                <div class="absolute inset-0 bg-gold-500 blur-[60px] opacity-20 rounded-full group-hover:opacity-30 transition-opacity"></div>
+                <img src="./chibi-horse.jpg" 
+                     onerror="this.src='https://scontent.fdad1-2.fna.fbcdn.net/v/t39.30808-6/634865611_122117184705141827_6376586750013180249_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=6ee11a&_nc_eui2=AeEyrR1_VOQIAQFtfzEk76EeKGQ7VEIyZSooZDtUQjJlKmrQwuW6Tt3C1wc1OlpCwrrGZRF9C6ZEQGYbIEF9upzf&_nc_ohc=pIKuFOJxSAkQ7kNvwHW6nkQ&_nc_oc=Adlr_hJQVdcGxgC4uPsDvazr8-A4s-NOs_z2dQYpoKyZUnqWh3Wd1NqVhvgfp484iOs&_nc_zt=23&_nc_ht=scontent.fdad1-2.fna&_nc_gid=bwg8Ki3NQTKLRAiCbJ8W3A&oh=00_AfsDVF0ScbkxoQhDSnI7TC94orf6Osh4LpgEaGkgg3R-Fw&oe=6998D742'" 
+                     alt="Thần Tài Pegasus 2026" 
+                     class="w-64 h-64 md:w-80 md:h-80 rounded-full object-cover border-4 border-gold-500/30 drop-shadow-[0_0_20px_rgba(255,215,0,0.4)] hover:scale-105 transition-transform duration-500 relative z-10">
+            </div>
+            
+            <h2 class="text-gold-500 font-bold tracking-[0.3em] text-sm md:text-lg mb-4 uppercase border-b border-gold-500/30 inline-block pb-2">
+                Khởi Đầu Kỷ Nguyên Mới
+            </h2>
+            
+            <h1 class="text-5xl md:text-5xl lg:text-5xl font-extrabold text-white tracking-tight leading-none mb-6">
+                CHÚC MỪNG NĂM MỚI<br />
+                <span class="text-gold-gradient font-serif">XUÂN BÍNH NGỌ 2026</span>
+            </h1>
+            
+            <p class="text-gray-300 text-lg md:text-xl font-light max-w-2xl mx-auto leading-relaxed mb-10">
+                BBE Pegasus Chapter: <strong>Kết Nối - Tốc Độ - Bứt Phá</strong>. <br>
+                Cùng kiến tạo một năm 2026 rực rỡ và thịnh vượng.
+            </p>
+            
+            <div class="flex flex-col sm:flex-row gap-4 justify-center w-full">
+                <button onclick="scrollToFortune()" class="px-8 py-4 bg-gradient-to-r from-gold-600 to-gold-400 text-dark-bg font-bold rounded-full shadow-[0_0_20px_rgba(255,215,0,0.4)] hover:scale-105 transition-transform flex items-center justify-center gap-2">
+                    <span class="material-icons">card_giftcard</span> Hái Lộc Đầu Xuân
+                </button>
+                <a href="https://www.facebook.com/bbepegasuschapter" target="_blank" class="px-8 py-4 border border-white/20 text-white hover:bg-white/10 rounded-full font-medium transition-colors backdrop-blur-sm">
+                    Ghé thăm Fanpage
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <section id="gallery" class="py-24 bg-slate-50 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center mb-16">
+                <span class="text-primary font-bold tracking-wider uppercase text-sm">Sự kiện 01/02/2026</span>
+                <h2 class="mt-2 text-4xl font-extrabold text-slate-900">Dấu Ấn Khởi Đầu</h2>
+                <div class="w-24 h-1 bg-gradient-to-r from-primary to-gold-500 mx-auto mt-4 rounded-full"></div>
+                <p class="mt-4 text-slate-600 max-w-2xl mx-auto">Lễ ra mắt BBE Pegasus Chapter</p>
+            </div>
+
+            <div class="columns-1 md:columns-2 lg:columns-3 gap-6 space-y-6">
+                <div class="break-inside-avoid rounded-xl overflow-hidden shadow-lg group relative cursor-zoom-in" onclick="openImage(this.querySelector('img').src)">
+                    <img src="https://scontent.fdad2-1.fna.fbcdn.net/v/t39.30808-6/624563723_122115632475141827_3493908110939682364_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=127cfc&_nc_eui2=AeHbVWf1fXfUxAg4EekUSMtQfGQZsS7_6I18ZBmxLv_ojcjmTLO3T8UX1_dG-_m_q0q2CNnMwFNIEZJbDh0MqbiS&_nc_ohc=uecx0090EyQQ7kNvwEZOG1R&_nc_oc=Adl3BlLevJOGBBBBIqmeCk_0gFYJuPRSqWWs9LuFVemOZpQ128_cWz1ypFrrxSkyHaE&_nc_zt=23&_nc_ht=scontent.fdad2-1.fna&_nc_gid=cmgruflnJ-wetdYVQhd05g&oh=00_Afug5joO84gQfyG7NKpSnCHp2V9DTwRTdMwDp8V6N3Ua_w&oe=6998E4B0" 
+                         class="w-full transition-transform duration-700 group-hover:scale-110">
+                </div>
+
+                <div class="break-inside-avoid rounded-xl overflow-hidden shadow-lg group relative cursor-zoom-in" onclick="openImage(this.querySelector('img').src)">
+                    <img src="https://scontent.fdad1-3.fna.fbcdn.net/v/t39.30808-6/625134417_122115633723141827_8835877106027276573_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=127cfc&_nc_eui2=AeF_YDUyO_dq02hTh62aaHvy-t5ZLZS0V9D63lktlLRX0Cd1q1Q844FF36--3zaFJTPMRtKx1hEffqvxSaepCL7Z&_nc_ohc=vR9xP9UC3sIQ7kNvwFvEBRS&_nc_oc=AdmL6yAEMq4xe3zXCnK7uEnllvl5bb5BmVEeuxIZKsmaIukuUtOwVeAg9tdmNrPG434&_nc_zt=23&_nc_ht=scontent.fdad1-3.fna&_nc_gid=pKbi5DYVC64_UMU1Xuap6A&oh=00_AfsK04IW22WhWOJ6kTWdcNEUQdLJUQHzT3xuJy9s4vwoSw&oe=6998F8F2" 
+                         class="w-full transition-transform duration-700 group-hover:scale-110">
+                </div>
+
+                <div class="break-inside-avoid rounded-xl overflow-hidden shadow-lg group relative cursor-zoom-in" onclick="openImage(this.querySelector('img').src)">
+                    <img src="https://scontent.fdad1-2.fna.fbcdn.net/v/t39.30808-6/625144189_122115632991141827_6500362431985878120_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=127cfc&_nc_eui2=AeHy_tG77uctCVjUsa1OopzJtmelsb3CtzG2Z6WxvcK3MSPoboak865yRveFdcQ0sZRFUkBVtqv4h0M2YUiiIHV0&_nc_ohc=nWZy-LQASnMQ7kNvwG8OA_g&_nc_oc=AdlfoMYyC35tB-oSj4uVE7saH2r1VYwDryuN8JGW1PwjNfxy7_zYWa8CSBm6TCM1qck&_nc_zt=23&_nc_ht=scontent.fdad1-2.fna&_nc_gid=8xkKgGWA41RrEc3m8mlTzg&oh=00_AfvF0TrtNN9u6liT9UFzR3twBGQmSwxabtDcnzykEK_uJA&oe=6998F796" 
+                         class="w-full transition-transform duration-700 group-hover:scale-110">
+                </div>
+            </div>
+            
+            <div class="mt-12 text-center">
+                <a href="https://www.facebook.com/bbepegasuschapter/photos" target="_blank" class="inline-flex items-center text-primary font-bold hover:underline">
+                    Xem Album Full <span class="material-icons ml-1">arrow_forward</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section id="leadership" class="py-24 bg-white border-t border-gray-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-slate-900">Ban Điều Hành Nhiệm Kỳ I</h2>
+                <p class="text-slate-500 mt-2">Đội ngũ dẫn dắt Pegasus vươn ra biển lớn</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="group p-6 rounded-2xl bg-white border border-gray-100 shadow-sm hover:shadow-xl hover:border-gold-400 transition-all text-center">
+                    <div class="w-24 h-24 mx-auto mb-4 rounded-full overflow-hidden border-2 border-gray-200 group-hover:border-gold-500 transition-colors">
+                        <img src="https://ui-avatars.com/api/?name=Chu+Tich&background=random" class="w-full h-full object-cover">
+                    </div>
+                    <h3 class="font-bold text-lg text-slate-900">Nguyễn Văn A</h3>
+                    <p class="text-primary text-sm font-medium mb-2">Chủ Tịch</p>
+                </div>
+                <div class="group p-6 rounded-2xl bg-white border border-gray-100 shadow-sm hover:shadow-xl hover:border-gold-400 transition-all text-center">
+                    <div class="w-24 h-24 mx-auto mb-4 rounded-full overflow-hidden border-2 border-gray-200 group-hover:border-gold-500 transition-colors">
+                        <img src="https://ui-avatars.com/api/?name=Pho+Chu+Tich&background=random" class="w-full h-full object-cover">
+                    </div>
+                    <h3 class="font-bold text-lg text-slate-900">Trần Thị B</h3>
+                    <p class="text-primary text-sm font-medium mb-2">Phó Chủ Tịch</p>
+                </div>
+                 <div class="group p-6 rounded-2xl bg-white border border-gray-100 shadow-sm hover:shadow-xl hover:border-gold-400 transition-all text-center">
+                    <div class="w-24 h-24 mx-auto mb-4 rounded-full overflow-hidden border-2 border-gray-200 group-hover:border-gold-500 transition-colors">
+                        <img src="https://ui-avatars.com/api/?name=Thu+Ky&background=random" class="w-full h-full object-cover">
+                    </div>
+                    <h3 class="font-bold text-lg text-slate-900">Lê Văn C</h3>
+                    <p class="text-primary text-sm font-medium mb-2">Tổng Thư Ký</p>
+                </div>
+                 <div class="group p-6 rounded-2xl bg-white border border-gray-100 shadow-sm hover:shadow-xl hover:border-gold-400 transition-all text-center">
+                    <div class="w-24 h-24 mx-auto mb-4 rounded-full overflow-hidden border-2 border-gray-200 group-hover:border-gold-500 transition-colors">
+                        <img src="https://ui-avatars.com/api/?name=Su+Kien&background=random" class="w-full h-full object-cover">
+                    </div>
+                    <h3 class="font-bold text-lg text-slate-900">Phạm Thị D</h3>
+                    <p class="text-primary text-sm font-medium mb-2">Trưởng Ban Sự Kiện</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="fortune" class="relative py-32 overflow-hidden bg-primary-dark text-center">
+        <div class="absolute inset-0 bg-pattern opacity-20"></div>
+        <div class="absolute inset-0 bg-gradient-to-r from-dark-bg/90 via-primary-dark/80 to-dark-bg/90"></div>
+        
+        <div class="absolute top-10 left-10 animate-float opacity-50">
+            <div class="w-16 h-24 bg-red-600 border border-gold-400 rounded flex items-center justify-center transform -rotate-12 shadow-xl">
+                <span class="text-gold-400 font-bold">PHÚC</span>
+            </div>
+        </div>
+        <div class="absolute bottom-20 right-20 animate-float opacity-50" style="animation-delay: 2s;">
+            <div class="w-16 h-24 bg-red-600 border border-gold-400 rounded flex items-center justify-center transform rotate-12 shadow-xl">
+                <span class="text-gold-400 font-bold">LỘC</span>
+            </div>
+        </div>
+
+        <div class="relative z-10 max-w-3xl mx-auto px-4">
+            <h2 class="text-4xl md:text-5xl font-extrabold text-white mb-6">Hái Lộc Đầu Xuân</h2>
+            <p class="text-white/80 text-lg mb-10">
+                Nhận thông điệp may mắn cho năm 2026.
+            </p>
+            
+            <button onclick="drawFortune()" class="group relative inline-flex items-center justify-center transition-transform active:scale-95">
+                <div class="absolute inset-0 bg-gold-400 blur-xl opacity-60 group-hover:opacity-100 transition-opacity duration-500 animate-pulse"></div>
+                <div class="relative bg-gradient-to-b from-gold-200 to-gold-600 border-2 border-white/30 px-12 py-8 rounded-full shadow-2xl">
+                    <span class="text-red-900 font-extrabold text-2xl md:text-3xl tracking-wide uppercase flex items-center gap-3">
+                        <span class="material-icons">touch_app</span> Bấm Hái Lộc
+                    </span>
+                </div>
+            </button>
+        </div>
+    </section>
+
+    <footer class="bg-dark-bg border-t border-white/5 py-12 text-center md:text-left">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div>
+                <h3 class="text-white font-bold text-xl mb-4">BBE PEGASUS CHAPTER</h3>
+                <p class="text-gray-400 text-sm">Tổ chức tạo ra nguồn nhân sự chất lượng cao cho một Việt Nam hùng mạnh.</p>
+            </div>
+            <div>
+                <h4 class="text-gold-500 font-bold mb-4">Liên Hệ</h4>
+                <p class="text-gray-400 text-sm mb-2"><span class="material-icons text-xs mr-2">place</span>Đà Nẵng, Việt Nam</p>
+                <p class="text-gray-400 text-sm"><span class="material-icons text-xs mr-2">email</span>bbepegasuschapter@gmail.com</p>
+            </div>
+            <div class="flex flex-col md:items-end justify-center">
+                 <a href="https://www.facebook.com/bbepegasuschapter" target="_blank" class="inline-flex items-center gap-2 text-white hover:text-gold-400 transition-colors">
+                    <span class="material-icons">facebook</span> Follow Fanpage
+                 </a>
+                 <p class="text-gray-600 text-xs mt-4">© 2026 Designed by BBE Tech Team</p>
+            </div>
+        </div>
+    </footer>
+
+    <div id="fortune-modal" class="hidden-modal fixed inset-0 z-50 flex items-center justify-center px-4 modal-transition">
+        <div class="absolute inset-0 bg-black/80 backdrop-blur-sm" onclick="closeModal()"></div>
+        <div class="relative bg-white rounded-2xl max-w-md w-full p-8 text-center shadow-[0_0_50px_rgba(255,215,0,0.5)] border-4 border-gold-500 transform scale-100 transition-all">
+            <div class="absolute -top-10 left-1/2 transform -translate-x-1/2 bg-red-600 text-gold-400 border-2 border-gold-400 w-20 h-20 rounded-full flex items-center justify-center text-3xl shadow-lg">
+                🐎
+            </div>
+            <h3 class="mt-8 text-2xl font-bold text-red-700 uppercase">Quẻ Bói Doanh Nhân</h3>
+            <div class="my-6 w-full h-px bg-gray-200"></div>
+            <p id="fortune-text" class="text-xl text-slate-800 font-medium leading-relaxed font-script text-3xl text-gold-600"></p>
+            <p id="fortune-meaning" class="mt-4 text-sm text-gray-500 italic"></p>
+            <button onclick="closeModal()" class="mt-8 w-full bg-primary hover:bg-primary-dark text-white font-bold py-3 rounded-xl transition-colors">
+                Nhận Lộc
+            </button>
+        </div>
+    </div>
+
+    <div id="image-modal" class="hidden-modal fixed inset-0 z-[60] flex items-center justify-center p-4 modal-transition bg-black/95">
+        <button class="absolute top-5 right-5 text-white/50 hover:text-white transition-colors z-[70]" onclick="closeImage()">
+            <span class="material-icons text-5xl">close</span>
+        </button>
+        
+        <div class="relative max-w-5xl max-h-screen w-full h-full flex items-center justify-center" onclick="closeImage()">
+            <img id="modal-img-display" src="" class="max-w-full max-h-[90vh] object-contain rounded-lg shadow-2xl border border-white/10">
+        </div>
+    </div>
+
+    <script>
+        // --- LOGIC HÁI LỘC ---
+        const wishes = [
+            { text: "Mã Đáo Thành Công", meaning: "Dự án mới sẽ thắng lợi thần tốc." },
+            { text: "Tài Lộc Như Ý", meaning: "Dòng tiền dương, lợi nhuận vượt KPI." },
+            { text: "Bứt Phá Giới Hạn", meaning: "Năm nay sẽ mở rộng quy mô gấp đôi." },
+            { text: "Quý Nhân Phù Trợ", meaning: "Gặp đối tác lớn, ký hợp đồng khủng." },
+            { text: "Vững Bước Tiên Phong", meaning: "Dẫn đầu thị trường ngách." },
+            { text: "Pegasus Cất Cánh", meaning: "Sự nghiệp thăng hoa như Rồng gặp Mây." }
+        ];
+
+        const modal = document.getElementById('fortune-modal');
+        const fortuneText = document.getElementById('fortune-text');
+        const fortuneMeaning = document.getElementById('fortune-meaning');
+
+        function scrollToFortune() {
+            document.getElementById('fortune').scrollIntoView({ behavior: 'smooth' });
+        }
+
+        function drawFortune() {
+            const randomWish = wishes[Math.floor(Math.random() * wishes.length)];
+            fortuneText.innerText = randomWish.text;
+            fortuneMeaning.innerText = randomWish.meaning;
+            fireConfetti();
+            modal.classList.remove('hidden-modal');
+            modal.classList.add('visible-modal');
+        }
+
+        function closeModal() {
+            modal.classList.remove('visible-modal');
+            modal.classList.add('hidden-modal');
+        }
+
+        function fireConfetti() {
+            var duration = 3 * 1000;
+            var animationEnd = Date.now() + duration;
+            var defaults = { startVelocity: 30, spread: 360, ticks: 60, zIndex: 60 };
+            function randomInRange(min, max) { return Math.random() * (max - min) + min; }
+            var interval = setInterval(function() {
+                var timeLeft = animationEnd - Date.now();
+                if (timeLeft <= 0) return clearInterval(interval);
+                var particleCount = 50 * (timeLeft / duration);
+                confetti(Object.assign({}, defaults, { particleCount, origin: { x: randomInRange(0.1, 0.3), y: Math.random() - 0.2 } }));
+                confetti(Object.assign({}, defaults, { particleCount, origin: { x: randomInRange(0.7, 0.9), y: Math.random() - 0.2 } }));
+            }, 250);
+        }
+
+        // --- LOGIC XEM ẢNH TO (LIGHTBOX) ---
+        const imageModal = document.getElementById('image-modal');
+        const modalImgDisplay = document.getElementById('modal-img-display');
+
+        function openImage(src) {
+            modalImgDisplay.src = src;
+            imageModal.classList.remove('hidden-modal');
+            imageModal.classList.add('visible-modal');
+        }
+
+        function closeImage() {
+            imageModal.classList.remove('visible-modal');
+            imageModal.classList.add('hidden-modal');
+            // Clear src sau khi đóng để tránh lộ ảnh cũ khi mở ảnh mới
+            setTimeout(() => { modalImgDisplay.src = ""; }, 300);
+        }
+        
+        // Đóng modal ảnh khi nhấn phím ESC
+        document.addEventListener('keydown', function(event) {
+            if (event.key === "Escape") {
+                closeImage();
+                closeModal();
+            }
+        });
+    </script>
+</body>
+</html>
