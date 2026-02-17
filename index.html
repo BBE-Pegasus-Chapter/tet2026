@@ -12,6 +12,9 @@
     
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;600;800&family=Dancing+Script:wght@700&display=swap" rel="stylesheet"/>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 
     <script>
         tailwind.config = {
@@ -186,8 +189,10 @@
             </h2>
             
             <h1 class="text-5xl md:text-5xl lg:text-5xl font-extrabold text-white tracking-tight leading-none mb-6">
-                CHÚC MỪNG NĂM MỚI <br />
-                <span class="text-gold-gradient font-serif">XUÂN BÍNH NGỌ 2026</span>
+                CHÚC MỪNG NĂM MỚI
+                <br>
+                <br>
+                <span class="text-gold-gradient font-Montserrat text-8xl md:text-8xl lg:text-8xl">XUÂN BÍNH NGỌ 2026</span>
             </h1>
             
             <p class="text-gray-300 text-lg md:text-xl font-light max-w-2xl mx-auto leading-relaxed mb-10">
@@ -291,7 +296,7 @@
                             <div class="leader-info-box p-6 text-center relative flex-1 flex flex-col justify-center">
                                 <div class="info-arrow-up"></div>
                                 <h2 class="font-bold text-lg uppercase tracking-wide">Hồ Thị Như Quỳnh</h2>
-                                <p class="leader-role text-primary text-sm font-bold mt-1">PHÓ CHỦ TỊCH & LT. BAN THÀNH VIÊN</p>
+                                <p class="leader-role text-primary text-sm font-bold mt-1">PHÓ CHỦ TỊCH & TRƯỞNG BAN THÀNH VIÊN</p>
                             </div>
                         </div>
                     </div>
@@ -304,7 +309,7 @@
                             <div class="leader-info-box p-6 text-center relative flex-1 flex flex-col justify-center">
                                 <div class="info-arrow-up"></div>
                                 <h2 class="font-bold text-lg uppercase tracking-wide">Nguyễn Trần Diệu Huyền</h2>
-                                <p class="leader-role text-primary text-sm font-bold mt-1">LT. BAN KHÁCH MỜI</p>
+                                <p class="leader-role text-primary text-sm font-bold mt-1">TRƯỞNG BAN KHÁCH MỜI</p>
                             </div>
                         </div>
                     </div>
@@ -317,7 +322,7 @@
                             <div class="leader-info-box p-6 text-center relative flex-1 flex flex-col justify-center">
                                 <div class="info-arrow-up"></div>
                                 <h2 class="font-bold text-lg uppercase tracking-wide">Đinh Như Hoàng Lộc</h2>
-                                <p class="leader-role text-primary text-sm font-bold mt-1">LT. BAN TRUYỀN THÔNG & SỰ KIỆN</p>
+                                <p class="leader-role text-primary text-sm font-bold mt-1">TRƯỞNG BAN TRUYỀN THÔNG & SỰ KIỆN</p>
                             </div>
                         </div>
                     </div>
@@ -330,7 +335,7 @@
                             <div class="leader-info-box p-6 text-center relative flex-1 flex flex-col justify-center">
                                 <div class="info-arrow-up"></div>
                                 <h2 class="font-bold text-lg uppercase tracking-wide">Trần Thị Hồng Ánh</h2>
-                                <p class="leader-role text-primary text-sm font-bold mt-1">LT. BAN ĐỊNH HƯỚNG</p>
+                                <p class="leader-role text-primary text-sm font-bold mt-1">TRƯỞNG BAN ĐỊNH HƯỚNG</p>
                             </div>
                         </div>
                     </div>
@@ -356,7 +361,7 @@
                             <div class="leader-info-box p-6 text-center relative flex-1 flex flex-col justify-center">
                                 <div class="info-arrow-up"></div>
                                 <h2 class="font-bold text-lg uppercase tracking-wide">Đinh Hoàng Bảo Quyên</h2>
-                                <p class="leader-role text-primary text-sm font-bold mt-1">LT. BAN NỘI DUNG</p>
+                                <p class="leader-role text-primary text-sm font-bold mt-1">TRƯỞNG BAN NỘI DUNG</p>
                             </div>
                         </div>
                     </div>
@@ -369,7 +374,7 @@
                             <div class="leader-info-box p-6 text-center relative flex-1 flex flex-col justify-center">
                                 <div class="info-arrow-up"></div>
                                 <h2 class="font-bold text-lg uppercase tracking-wide">Bùi Nguyễn Ngọc Tuệ</h2>
-                                <p class="leader-role text-primary text-sm font-bold mt-1">LT. BAN CHẤT LƯỢNG</p>
+                                <p class="leader-role text-primary text-sm font-bold mt-1">TRƯỞNG BAN CHẤT LƯỢNG</p>
                             </div>
                         </div>
                     </div>
@@ -441,7 +446,7 @@
             <div class="absolute -top-10 left-1/2 transform -translate-x-1/2 bg-red-600 text-gold-400 border-2 border-gold-400 w-20 h-20 rounded-full flex items-center justify-center text-3xl shadow-lg">
                 🐎
             </div>
-            <h3 class="mt-8 text-2xl font-bold text-red-700 uppercase">Quẻ Bói Doanh Nhân</h3>
+            <h3 class="mt-8 text-2xl font-bold text-red-700 uppercase">Quẻ Bói May Mắn</h3>
             <div class="my-6 w-full h-px bg-gray-200"></div>
             <p id="fortune-text" class="text-xl text-slate-800 font-medium leading-relaxed font-script text-3xl text-gold-600"></p>
             <p id="fortune-meaning" class="mt-4 text-sm text-gray-500 italic"></p>
@@ -492,12 +497,29 @@
 
         // --- LOGIC HÁI LỘC ---
         const wishes = [
+            // --- Mảng Tài Lộc & Sự Nghiệp (Nghiêm túc & Oai) ---
             { text: "Mã Đáo Thành Công", meaning: "Dự án mới sẽ thắng lợi thần tốc." },
-            { text: "Tài Lộc Như Ý", meaning: "Dòng tiền dương, lợi nhuận vượt KPI." },
-            { text: "Bứt Phá Giới Hạn", meaning: "Năm nay sẽ mở rộng quy mô gấp đôi." },
-            { text: "Quý Nhân Phù Trợ", meaning: "Gặp đối tác lớn, ký hợp đồng khủng." },
-            { text: "Vững Bước Tiên Phong", meaning: "Dẫn đầu thị trường ngách." },
-            { text: "Pegasus Cất Cánh", meaning: "Sự nghiệp thăng hoa như Rồng gặp Mây." }
+            { text: "KPI Vượt Đỉnh", meaning: "KPI xanh chỉ là chuyện nhỏ." },
+            { text: "Tiền Vào Như Nước", meaning: "Sông Đà có cạn, ví bạn vẫn đầy." },
+            { text: "Vững Bước Tiên Phong", meaning: "Luôn dẫn đầu, không ai theo kịp." },
+            { text: "Thăng Tiến Thần Tốc", meaning: "Sếp quý, đồng nghiệp thương, lương thưởng tăng." },
+            { text: "Pegasus Cất Cánh", meaning: "Sự nghiệp thăng hoa như Rồng gặp Mây." },
+
+            // --- Mảng Quan Hệ & Kết Nối (Trend & Vui vẻ) ---
+            { text: "Nối Rộng Quan Hệ", meaning: "New Year 'khum' bằng Near You." }, // Giữ câu này của bạn, rất hay!
+            { text: "Tình Yêu Tự Tìm Đến", meaning: "Ngồi im tình yêu cũng tới." },
+            { text: "Vạn Người Mê", meaning: "Nhân hiệu tỏa sáng, đi đâu cũng được spotlight." },
+            { text: "Thoát Kiếp Deadline", meaning: "Làm chủ thời gian, không để deadline 'dí'." },
+
+            // --- Mảng Đời Sống & Tinh Thần (Nhẹ nhàng) ---
+            { text: "Tâm Bất Biến", meaning: "Giữa dòng đời vạn biến, tâm bạn vẫn an nhiên." },
+            { text: "Ăn Ngon Mặc Đẹp", meaning: "Năm nay gu thẩm mỹ lên hương vùn vụt." },
+            { text: "Du Lịch Thả Ga", meaning: "Check-in những nơi chưa từng đến." },
+            { text: "Sức Khỏe Vô Địch", meaning: "Cày dự án thâu đêm vẫn tươi như hoa." },
+            
+            // --- Mảng May Mắn Bất Ngờ ---
+            { text: "Quý Nhân Phù Trợ", meaning: "Gặp khó khăn là có người gỡ rối ngay." },
+            { text: "Lộc Rơi Trúng Đầu", meaning: "Cẩn thận kẻo tiền đè bẹp." }
         ];
 
         const modal = document.getElementById('fortune-modal');
