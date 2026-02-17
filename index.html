@@ -530,10 +530,22 @@
             document.getElementById('fortune').scrollIntoView({ behavior: 'smooth' });
         }
 
+        let lastIndex = -1; // Biến lưu chỉ số lần trước
+
         function drawFortune() {
-            const randomWish = wishes[Math.floor(Math.random() * wishes.length)];
+            let randomIndex;
+            // Vòng lặp đảm bảo không trùng với lần quay ngay trước đó
+            do {
+                randomIndex = Math.floor(Math.random() * wishes.length);
+            } while (randomIndex === lastIndex && wishes.length > 1);
+
+            lastIndex = randomIndex; // Lưu lại cho lần sau so sánh
+
+            const randomWish = wishes[randomIndex];
             fortuneText.innerText = randomWish.text;
             fortuneMeaning.innerText = randomWish.meaning;
+            
+            // ... (phần code fireConfetti và hiện modal giữ nguyên) ...
             fireConfetti();
             modal.classList.remove('hidden-modal');
             modal.classList.add('visible-modal');
