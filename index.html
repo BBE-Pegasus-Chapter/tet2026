@@ -152,10 +152,10 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex items-center justify-between h-20">
                 <div class="flex items-center gap-3">
-                    <img src="./chibi-horse.jpg" 
+                    <img src="./logo.png" 
                          onerror="this.src='https://imgs.search.brave.com/e-xseQNIIJfXl-RwvOJf93AowZP63iBxgO9wm8mWADo/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvN2E3Yjk0OWYw/ZTU0YWZkOTYzYTY3/YTZhNWY2NzgwZWFm/NWZlZWEyMGNlOWI5/NDU3YWY5OGNlY2Q1/Zjg1MzAxMS9iYmV2/aWV0bmFtLm9yZy8'"
                          alt="BBE Pegasus Logo"
-                         class="w-12 h-12 rounded-full object-cover border-2 border-gold-metallic shadow-[0_0_15px_rgba(255,215,0,0.3)] bg-dark-bg">
+                         class="w-12 h-12 rounded-full object-cover border-2 border-gold-metallic shadow-[0_0_15px_rgba(255,215,0,0.3)] bg-white cursor-pointer hover:scale-110 transition-transform">
                 </div>
                 <div class="hidden md:block">
                     <div class="flex items-center space-x-8">
@@ -172,7 +172,7 @@
     </nav>
 
     <header id="hero" class="relative w-full min-h-screen flex items-center justify-center overflow-hidden bg-dark-bg text-center pt-16">
-        <div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1548625361-12e62243e8ce?q=80&w=2600&auto=format&fit=crop')] bg-cover bg-center opacity-10 mix-blend-overlay"></div>
+        <div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1548625361-12e62    243e8ce?q=80&w=2600&auto=format&fit=crop')] bg-cover bg-center opacity-10 mix-blend-overlay"></div>
         <div class="absolute inset-0 bg-gradient-to-b from-transparent via-dark-bg/90 to-dark-bg"></div>
 
         <div class="relative z-10 px-4 max-w-5xl mx-auto flex flex-col items-center">
@@ -183,10 +183,6 @@
                      alt="Thần Tài Pegasus 2026" 
                      class="w-64 h-64 md:w-80 md:h-80 rounded-full object-cover border-4 border-gold-500/30 drop-shadow-[0_0_20px_rgba(255,215,0,0.4)] hover:scale-105 transition-transform duration-500 relative z-10">
             </div>
-            
-            <h2 class="text-gold-500 font-bold tracking-[0.3em] text-sm md:text-lg mb-4 uppercase border-b border-gold-500/30 inline-block pb-2">
-                Khởi Đầu Kỷ Nguyên Mới
-            </h2>
             
             <h1 class="text-5xl md:text-5xl lg:text-5xl font-extrabold text-white tracking-tight leading-none mb-6">
                 CHÚC MỪNG NĂM MỚI
@@ -257,7 +253,7 @@
                             <div class="leader-info-box p-6 text-center relative flex-1 flex flex-col justify-center">
                                 <div class="info-arrow-up"></div>
                                 <h2 class="font-bold text-lg uppercase tracking-wide">Nguyễn Hoàng Phú</h2>
-                                <p class="leader-role text-primary text-sm font-bold mt-1">LDC</p>
+                                <p class="leader-role text-primary text-sm font-bold mt-1">LDC - NGƯỜI MỞ CHAPTER</p>
                             </div>
                         </div>
                     </div>
@@ -270,7 +266,7 @@
                             <div class="leader-info-box p-6 text-center relative flex-1 flex flex-col justify-center">
                                 <div class="info-arrow-up"></div>
                                 <h2 class="font-bold text-lg uppercase tracking-wide">Hoàng Lê Bảo Trâm</h2>
-                                <p class="leader-role text-primary text-sm font-bold mt-1">SGDC</p>
+                                <p class="leader-role text-primary text-sm font-bold mt-1">SGDC - GIÁM ĐỐC HỖ TRỢ CHĂM SÓC VÀ PHÁT TRIỂN CHAPTER</p>
                             </div>
                         </div>
                     </div>
@@ -322,7 +318,7 @@
                             <div class="leader-info-box p-6 text-center relative flex-1 flex flex-col justify-center">
                                 <div class="info-arrow-up"></div>
                                 <h2 class="font-bold text-lg uppercase tracking-wide">Đinh Như Hoàng Lộc</h2>
-                                <p class="leader-role text-primary text-sm font-bold mt-1">TRƯỞNG BAN TRUYỀN THÔNG & SỰ KIỆN</p>
+                                <p class="leader-role text-primary text-xs font-bold mt-1">TRƯỞNG BAN TRUYỀN THÔNG & SỰ KIỆN</p>
                             </div>
                         </div>
                     </div>
@@ -497,19 +493,34 @@
 
         // --- LOGIC HÁI LỘC ---
         const wishes = [
-            // --- Mảng Tài Lộc & Sự Nghiệp (Nghiêm túc & Oai) ---
+            // --- Mảng Học Tập & Sự Nghiệp (Nghiêm túc & Oai) ---
             { text: "Mã Đáo Thành Công", meaning: "Dự án mới sẽ thắng lợi thần tốc." },
             { text: "KPI Vượt Đỉnh", meaning: "KPI xanh chỉ là chuyện nhỏ." },
-            { text: "Tiền Vào Như Nước", meaning: "Sông Đà có cạn, ví bạn vẫn đầy." },
+            { text: "GPA Chạm Đỉnh", meaning: "Học bổng về tay, thầy cô yêu quý." }, // Mới sửa
             { text: "Vững Bước Tiên Phong", meaning: "Luôn dẫn đầu, không ai theo kịp." },
-            { text: "Thăng Tiến Thần Tốc", meaning: "Sếp quý, đồng nghiệp thương, lương thưởng tăng." },
+            { text: "Thăng Tiến Thần Tốc", meaning: "Level up bản thân mỗi ngày." }, // Sửa lại cho hợp sinh viên
             { text: "Pegasus Cất Cánh", meaning: "Sự nghiệp thăng hoa như Rồng gặp Mây." },
 
+            // --- Mới bổ sung: Kỹ Năng & Cống Hiến (Thay thế mảng Kinh doanh) ---
+            { text: "Skill Full Tầm", meaning: "Cân mọi dự án, kỹ năng thượng thừa." },
+            { text: "Ý Tưởng Bùng Nổ", meaning: "Sáng tạo không ngừng, project cực chất." },
+            { text: "Thủ Lĩnh Tiềm Năng", meaning: "Dẫn dắt team đi đến thành công vang dội." },
+            { text: "Nhiệt Huyết Căng Tràn", meaning: "Cháy hết mình trong mọi hoạt động phong trào." },
+            { text: "Lan Tỏa Giá Trị", meaning: "Cống hiến hết mình, nhận lại niềm vui." },
+            { text: "Cơ Hội Rộng Mở", meaning: "Săn được học bổng hoặc job xịn xò." },
+
             // --- Mảng Quan Hệ & Kết Nối (Trend & Vui vẻ) ---
-            { text: "Nối Rộng Quan Hệ", meaning: "New Year 'khum' bằng Near You." }, // Giữ câu này của bạn, rất hay!
+            { text: "Nối Rộng Quan Hệ", meaning: "New Year 'khum' bằng Near You." }, 
             { text: "Tình Yêu Tự Tìm Đến", meaning: "Ngồi im tình yêu cũng tới." },
             { text: "Vạn Người Mê", meaning: "Nhân hiệu tỏa sáng, đi đâu cũng được spotlight." },
             { text: "Thoát Kiếp Deadline", meaning: "Làm chủ thời gian, không để deadline 'dí'." },
+
+            // --- Mới bổ sung: Phong Cách & Cá Tính ---
+            { text: "Thần Thái Ngút Ngàn", meaning: "Sang chảnh, khí chất, ai cũng nể." },
+            { text: "Nói Không Với Drama", meaning: "Tâm tịnh, đời sang, miễn nhiễm thị phi." },
+            { text: "Bão Like Tới Tấp", meaning: "Đăng gì cũng hot, content chất lừ." },
+            { text: "Sống Chất Như Nước Cất", meaning: "Work hard, Play harder!" },
+            { text: "Học Hỏi Không Ngừng", meaning: "Nâng cấp bản thân, phiên bản tốt hơn." },
 
             // --- Mảng Đời Sống & Tinh Thần (Nhẹ nhàng) ---
             { text: "Tâm Bất Biến", meaning: "Giữa dòng đời vạn biến, tâm bạn vẫn an nhiên." },
@@ -517,9 +528,15 @@
             { text: "Du Lịch Thả Ga", meaning: "Check-in những nơi chưa từng đến." },
             { text: "Sức Khỏe Vô Địch", meaning: "Cày dự án thâu đêm vẫn tươi như hoa." },
             
+            // --- Mới bổ sung: May Mắn & Bình An ---
+            { text: "Vạn Sự Hanh Thông", meaning: "Làm gì cũng thuận buồm xuôi gió." },
+            { text: "Cầu Được Ước Thấy", meaning: "Vũ trụ sẽ đáp lại mọi mong muốn của bạn." },
+            { text: "Ra Ngõ Gặp Hên", meaning: "Bước chân trái gặp may, chân phải gặp lộc." },
+            { text: "Bừng Sáng Nụ Cười", meaning: "Năm mới ngập tràn niềm vui và tiếng cười." },
+
             // --- Mảng May Mắn Bất Ngờ ---
             { text: "Quý Nhân Phù Trợ", meaning: "Gặp khó khăn là có người gỡ rối ngay." },
-            { text: "Lộc Rơi Trúng Đầu", meaning: "Cẩn thận kẻo tiền đè bẹp." }
+            { text: "Lộc Rơi Trúng Đầu", meaning: "May mắn bất ngờ ập đến không kịp đỡ." }
         ];
 
         const modal = document.getElementById('fortune-modal');
